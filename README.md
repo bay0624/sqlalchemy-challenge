@@ -25,4 +25,11 @@ Using Python and SQLAlchemy to do basic climate analysis and data exploration of
 
 ![image](https://user-images.githubusercontent.com/53978733/121991227-40f72480-cd6d-11eb-8958-04ac672e2ded.png)
 
-
+## Climate App
+Now that the initial analysis was completed. A Flask API app was designed, based on the queries developed above. Six routes were created and they are as follows:
+Routes
+- <b>/Home page</b>: List all routes that are available.
+- <b>/api/v1.0/precipitation</b>: Lists most recent 12 months of precipitation data, converting the query results to a dictionary using date as the key and prcp as the value.
+- <b>/api/v1.0/stations</b>: Returns a JSON list of stations from the dataset.
+- <b>/api/v1.0/tobs</b>: Lists the dates and temperature observations of the most active station for the most recent 12 months of data. Returns a JSON list of temperature observations (TOBS) for that year.
+- <b>/api/v1.0/{start}</b> and <b>/api/v1.0/{start}/{end}</b>: A query that returns the minimum temperature, the average temperature, and the max temperature for a given start or start-end range. When given the start date only, calculate min, max, and avg for all dates greater than and equal to the start date. When given the start and the end date, calculate the minimum, average, and maximum obvserved temperature for dates between the start and end date inclusive. Return a JSONified dictionary of these minimum, maximum, and average temperatures.
