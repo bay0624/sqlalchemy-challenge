@@ -34,5 +34,31 @@ Routes
 - <b>/api/v1.0/tobs</b>: Lists the dates and temperature observations of the most active station for the most recent 12 months of data. Returns a JSON list of temperature observations (TOBS) for that year.
 - <b>/api/v1.0/{start}</b> and <b>/api/v1.0/{start}/{end}</b>: A query that returns the minimum temperature, the average temperature, and the max temperature for a given start or start-end range. When given the start date only, calculate min, max, and avg for all dates greater than and equal to the start date. When given the start and the end date, calculate the minimum, average, and maximum obvserved temperature for dates between the start and end date inclusive. Return a JSONified dictionary of these minimum, maximum, and average temperatures.
 
-# Temperature Analysis 1
+# Temperature Analysis I
+
+# Temperature Analysis II
+Presented with a hypothetical scenario where you are looking to take a trip from August first to August 2017, but are worried that the weather will be less than ideal. Using historical data in the dataset we find out what the temperature has previously looked like.
+
+- Create a function called calc_temps that will accept a start date and end date in the format %Y-%m-%d. The function will return the minimum, average, and maximum temperatures for that range of dates.
+- Use the calc_temps function to calculate the min, avg, and max temperatures for your trip using the matching dates from a previous year (i.e., use "2017-08-01").
+- Plot the min, avg, and max temperature from your previous query as a bar chart.
+- Use the average temperature as the bar height (y value) and use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
+
+![image](https://user-images.githubusercontent.com/53978733/121992449-a9df9c00-cd6f-11eb-9815-871d3818b943.png)
+
+## Daily Rainfall Average
+Now that you have an idea of the temperature lets check to see what the rainfall has been, you don't want a when it rains the whole time!
+- Calculate the rainfall per weather station using the previous year's matching dates.
+- Sort this in descending order by precipitation amount and list the station, name, latitude, longitude, and elevation.
+
+## Daily Temperature Normals
+- Calculate the daily normals across all weather stations for all previous years with matching month and day for your trip (August first to August seventh, inclusive). Normals are the averages for the min, avg, and max temperatures.
+- Create a function called daily_normals that will return the daily normals for a specific month and day in tuple format. This date string will be in the format %m-%d. Be sure to use all historic TOBS that match that date string.
+- Use the daily_normals function to calculate the normals for each date string and append the resulting tuples to a list (so you will end up with a list of tuples).
+- Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.
+- Plot an area plot (stacked=False) for the daily normals.
+
+![image](https://user-images.githubusercontent.com/53978733/121992471-b2d06d80-cd6f-11eb-9407-9de322b6b024.png)
+
+
 
