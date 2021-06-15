@@ -38,6 +38,7 @@ Routes
 Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December?
 Using SQLAlchemy, we identify the average temperature in June at all stations across all available years in the dataset. We do the same for December temperature.
 We then use t-test to determine if difference in means is statistically significant. The result is below:
+
 <b>Ttest_indResult(statistic=4.615865424404701, pvalue=0.00028626292761018595)</b>
 
 # Temperature Analysis II
