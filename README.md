@@ -10,7 +10,8 @@ Using Python and SQLAlchemy to do basic climate analysis and data exploration of
 
 ## Precipitation Analysis Step 2
 - After establishing link, I then used SQLAlchemy ORM queries to find the most recent date in the data set.
-- Using this date, I retrieved the average precipitation per day for the previous 12 months, and displayed the date in ascending order.
+- Using this date, I retrieved the average precipitation per day for the previous 12 months, in ascending order.
 - The query results were then loaded into a Pandas DataFrame and the index was set to the date column.
 - I then proceeded to plot the results using the Seaborn.
+
 
