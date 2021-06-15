@@ -14,4 +14,15 @@ Using Python and SQLAlchemy to do basic climate analysis and data exploration of
 - The query results were then loaded into a Pandas DataFrame and the index was set to the date column.
 - I then proceeded to plot the results using the Seaborn.
 
+![image](https://user-images.githubusercontent.com/53978733/121991017-cd551780-cd6c-11eb-875d-e66a3a99ea91.png)
+
+## Station Analysis
+- Designed a query to calculate the total number of stations in the dataset.
+- Designed a query that lists all stations with their corresponding observation count in descending order to determine which station is the most active (i.e., has the greatest number of observations).
+- Calculated the lowest, highest, and average temperature for that station id (i.e., the one with the greatest number of observations).
+- Designed a query to retrieve the last 12 months of temperature observation data (TOBS) for the most active station.
+- Then plotted the results as a histogram with bins=12.
+
+![image](https://user-images.githubusercontent.com/53978733/121991227-40f72480-cd6d-11eb-8958-04ac672e2ded.png)
+
 
